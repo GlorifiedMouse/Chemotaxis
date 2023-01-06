@@ -5,8 +5,8 @@ class Walker {
   int myColor = color(r, g, 0);
 
   Walker() {
-    myX = (int)(Math.random()*1000);
-    myY = (int)(Math.random()*500);
+    myX = (int)(Math.random()*width);
+    myY = (int)(Math.random()*height);
   }
   void move() {
     if (mouseX > myX) {
@@ -27,11 +27,11 @@ class Walker {
   }
   void show() {
     fill(myColor);
-    ellipse(myX, myY, 50, 50);
-    //System.out.println(r + "   " + g);
+    int bactSize = 40;
+    ellipse(myX, myY, bactSize, bactSize);
   }
   void scatter() {
-    myX = (int)(Math.random()*1000);
-    myY = (int)(Math.random()*500);
+    myX = (int)(Math.random()*width);
+    myY = (int)(Math.random()*height);
   }
 }
